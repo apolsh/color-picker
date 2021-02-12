@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import ru.hse.wasd.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.hse.wasd.CustomColorPicker">
+  <VBox GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+    <ColorTextfieldController fx:id="redInput" labelText="Красный:"/>
+    <ColorTextfieldController fx:id="greenInput" labelText="Зеленый:" />
+    <ColorTextfieldController fx:id="blueInput" labelText="Синий:" />
+  </VBox>
+   <Rectangle fx:id="colorSample" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" width="100.0" GridPane.columnIndex="2" />
+  <HBox alignment="CENTER" spacing="50" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+    <fx:define>
+      <ToggleGroup fx:id="colorMode" />
+    </fx:define>
+    <RadioButton text="dec" selected="true" toggleGroup="$colorMode"/>
+    <RadioButton text="hex"  toggleGroup="$colorMode"/>
+  </HBox>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+<!--  <Label style="-fx-min-height: 100; -fx-min-width: 100" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="0" GridPane.rowSpan="2" />-->
+</GridPane>
